@@ -14,6 +14,7 @@ import {
   IconProps,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import cover from "./../assets/googlebusiness/cover.jpg";
 
 const PlayIcon = createIcon({
@@ -95,7 +96,7 @@ const HeaderContent = () => {
               bg={"red.400"}
               _hover={{ bg: "red.500" }}
             >
-              Müraciət et!
+              <Link to="/contactus"> Müraciət et!</Link>
             </Button>
           </Stack>
         </Stack>
