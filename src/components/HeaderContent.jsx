@@ -71,11 +71,11 @@ const HeaderContent = () => {
                 zIndex: -1,
               }}
             >
-              Ölkəmizin
+              Ölkəmizin ən böyük
             </Text>
             <br />
             <Text as={"span"} color={"red.400"}>
-              İlk reabilitasiyası
+              Reabilitasiyas mərkəzi
             </Text>
           </Heading>
           <Text color={"gray.500"}>

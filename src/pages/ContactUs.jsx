@@ -16,8 +16,6 @@ import {
   Icon,
 } from "@chakra-ui/react";
 
-
-
 const Blur = (props) => {
   return (
     <Icon
@@ -64,7 +62,7 @@ const ContactUs = () => {
               &
             </Text>{" "}
             Psixoloq
-          </Heading>>
+          </Heading>
         </Stack>
         <Stack
           bg={"gray.50"}

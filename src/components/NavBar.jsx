@@ -16,44 +16,41 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 import logo from "./../assets/logo.png";
 
-const Links = ["Haqqımızda", "Korpuslar", "Müraciət"];
+const Links = [
+  {
+    id: 1,
+    title: "Ana Səhifə",
+    url: "/home",
+  },
+  {
+    id: 2,
+    title: "Haqqımızda",
+    url: "/aboutus",
+  },
+  {
+    id: 3,
+    title: "Müraciət et",
+    url: "/contactus",
+  },
+];
 
-const NavLink = (props) => {
-  const { children } = props;
 
-  return (
-    <Box
-      as="a"
-      px={2}
-      py={1}
-      rounded={"md"}
-      _hover={{
-        textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
-      }}
-      href={"#"}
-    >
-      {children}
-    </Box>
-  );
-};
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  
-
-
   return (
     <>
-      <Box bgGradient={
-        useColorModeValue(
+      <Box
+        bgGradient={useColorModeValue(
           "linear(to-t, #f1f1f1, #f1f1f1)",
           "linear(to-t, #1a202c, #1a202c)"
-        )
-      } px={4}>
+        )}
+        px={4}
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -72,7 +69,9 @@ const NavBar = () => {
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <Link key={link.id} to={link.url}>
+                  {link.title}
+                </Link>
               ))}
             </HStack>
           </HStack>
