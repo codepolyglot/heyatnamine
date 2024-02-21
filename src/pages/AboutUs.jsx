@@ -1,9 +1,13 @@
 import React from "react";
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
 const AboutUs = () => {
   return (
-    <Box p="6">
+<>
+<NavBar />
+<Box p="6">
       <Heading as="h2" size="xl" mb="4">
         About Us
       </Heading>
@@ -28,6 +32,8 @@ const AboutUs = () => {
         </Text>
       </Flex>
     </Box>
+    <Footer />
+</>
   );
 };
 

@@ -54,7 +54,7 @@ const Statistics = () => {
         py={10}
         fontWeight={"bold"}
       >
-            "Niye görə məhz bizim mərkəzi seçməlisiniz"
+            "Niyə görə məhz bizim mərkəzi seçməlisiniz"
       </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
         <StatsCard
@@ -64,7 +64,7 @@ const Statistics = () => {
         />
         <StatsCard
           title={"Uğurlu nəticə"}
-          stat={"1,000"}
+          stat={"1,000 +"}
           icon={<IoCheckmarkDoneCircleOutline size={"3em"} />}
         />
         <StatsCard
