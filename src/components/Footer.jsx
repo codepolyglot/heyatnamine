@@ -53,20 +53,6 @@ const Footer = () => {
         align={"center"}
       >
         <Logo />
-        <Stack direction={"row"} spacing={6}>
-          <Box as="a" href={"#"}>
-            Home
-          </Box>
-          <Box as="a" href={"#"}>
-            About
-          </Box>
-          <Box as="a" href={"#"}>
-            Blog
-          </Box>
-          <Box as="a" href={"#"}>
-            Contact
-          </Box>
-        </Stack>
       </Container>
 
       <Box
@@ -83,7 +69,7 @@ const Footer = () => {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Text>© 2024 Həyat Naminə. All rights reserved</Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
               <FaTwitter />

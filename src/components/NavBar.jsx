@@ -35,12 +35,26 @@ const Links = [
     title: "Müraciət et",
     url: "/contactus",
   },
+  {
+    id: 4,
+    title: "Peşəkar komandamız",
+    url: "/ourteam",
+  },
+  {
+    id: 5,
+    title: "Xidmətlərimiz",
+    url: "/services",
+  },
 ];
-
-
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const style = {
+    padding:"5px",
+    border:"1px solid #383d47",
+    borderRadius:"5px",
+  }
 
   return (
     <>
@@ -69,9 +83,11 @@ const NavBar = () => {
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link) => (
-                <Link key={link.id} to={link.url}>
-                  {link.title}
-                </Link>
+                <span style={style}>
+                  <Link key={link.id} to={link.url}>
+                    {link.title}
+                  </Link>
+                </span>
               ))}
             </HStack>
           </HStack>
