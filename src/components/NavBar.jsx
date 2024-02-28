@@ -46,10 +46,11 @@ const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const style = {
-    padding:"5px",
-    border:"1px solid #383d47",
-    borderRadius:"5px",
-  }
+    padding: "5px",
+    border: "1px solid #383d47",
+    borderRadius: "5px",
+    display: isOpen ? "block" : "none",
+  };
 
   return (
     <>
@@ -60,31 +61,58 @@ const NavBar = () => {
         )}
         px={4}
       >
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <IconButton
-            size={"md"}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
-            onClick={isOpen ? onClose : onOpen}
-          />
+        <Flex alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
-            <Box>
-              <img src={logo} alt="logo" width="60" />
-            </Box>
             <HStack
               as={"nav"}
               spacing={4}
-              display={{ base: "none", md: "flex" }}
+              display={{ base: isOpen && "flex", md: "flex" }}
+              flexDirection={{
+                base: isOpen ? "column" : "none",
+              }}
             >
-              {Links.map((link,index) => (
-                <span key={index} style={style}>
-                  <Link key={link.id} to={link.url}>
-                    {link.title}
-                  </Link>
-                </span>
-              ))}
+              <IconButton
+                size={"md"}
+                icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+                aria-label={"Open Menu"}
+                display={{ md: "none" }}
+                onClick={isOpen ? onClose : onOpen}
+              />
+              {isOpen ? (
+                <Box
+                  position={isOpen ? "absolute" : "relative"}
+                  left={isOpen ? "0" : "0"}
+                  zIndex={isOpen ? "100" : "0"}
+                  p={4}
+                  borderRadius={isOpen ? "0" : "10px"}
+                  w={isOpen ? "50%" : "auto"}
+                  h={isOpen ? "100%" : "auto"}
+                  top={isOpen ? "30" : "0"}
+                >
+                  {Links.map((link, index) => (
+                    <span key={index} style={style}>
+                      <Link key={link.id} to={link.url}>
+                        {link.title}
+                      </Link>
+                    </span>
+                  ))}
+                </Box>
+              ) : (
+                <>
+                  {Links.map((link, index) => (
+                    <span key={index} style={style}>
+                      <Link key={link.id} to={link.url}>
+                        {link.title}
+                      </Link>
+                    </span>
+                  ))}
+                </>
+              )}
             </HStack>
+            <Box>
+              <img src={logo} alt="logo" width="60" />
+            </Box>
+            {/*  */}
           </HStack>
         </Flex>
       </Box>
