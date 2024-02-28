@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import ContactUs from "../pages/ContactUs";
 import AboutUs from "../pages/AboutUs";
 import OurTeam from "../pages/OurTeam";
-import Services from "../pages/Services";
+
 
 const Dashboard = () => {
   return (
@@ -16,7 +16,6 @@ const Dashboard = () => {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/ourteam" element={<OurTeam />} />
-        <Route path="/services" element={<Services />} />
       </Routes>
     </>
   );

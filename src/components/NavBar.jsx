@@ -40,11 +40,6 @@ const Links = [
     title: "Peşəkar komandamız",
     url: "/ourteam",
   },
-  {
-    id: 5,
-    title: "Xidmətlərimiz",
-    url: "/services",
-  },
 ];
 
 const NavBar = () => {
@@ -82,8 +77,8 @@ const NavBar = () => {
               spacing={4}
               display={{ base: "none", md: "flex" }}
             >
-              {Links.map((link) => (
-                <span style={style}>
+              {Links.map((link,index) => (
+                <span key={index} style={style}>
                   <Link key={link.id} to={link.url}>
                     {link.title}
                   </Link>
