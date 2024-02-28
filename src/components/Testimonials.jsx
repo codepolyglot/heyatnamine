@@ -91,8 +91,12 @@ const TestimonialAvatar = ({ src, name, title }) => {
 const Testimonials = () => {
   return (
     <Box>
-      <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
-        <Stack spacing={0} align={"center"}>
+      <Container maxW={"7xl"} py={16} px={8} as={Stack} spacing={12}>
+        <Stack
+          spacing={0}
+          align={"center"}
+          style={{ marginLeft: "auto", marginRight: "auto", maxWidth: "100%" }}
+        >
           <Heading>
             BİZİM{" "}
             <Text as={"span"} color={"blue.400"}>
@@ -100,9 +104,18 @@ const Testimonials = () => {
             </Text>
           </Heading>
           <br />
-          <Badge colorScheme="green" padding={2}>
-            Pasientlərimizin ailələrindən gələn rəylər onların xidmətlərimizə
-            göstərdikləri sarsılmaz inamı əks etdirir
+
+          <Badge
+            colorScheme="green"
+            padding={6}
+            borderRadius={"8px"}
+            // width={{ base: "80%", md: "90%" }}
+            display={"block"}
+            textAlign={"center"}
+            whiteSpace={"wrap"}
+          >
+            Pasientlərimizin ailələrindən gələn rəylər  onların
+            xidmətlərimizə göstərdikləri sarsılmaz inamı əks etdirir
           </Badge>
         </Stack>
         <Stack

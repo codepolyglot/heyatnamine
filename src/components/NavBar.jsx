@@ -11,7 +11,6 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "./../assets/logo.png";
 
@@ -42,8 +41,8 @@ const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const gradient = useColorModeValue(
-    "linear(to-t, #f1f1f1, #f1f1f1)",
-    "linear(to-t, #1a202c, #1a202c)"
+    "linear(to-t, #fff1f1, #fff1f1)",
+    "linear(to-t, #1a202c, #1e202c)"
   );
 
   return (
@@ -66,7 +65,7 @@ const NavBar = () => {
               color="black"
               _hover={{
                 textDecoration: "none",
-                bg: "${gradient}",
+                bg: `${gradient}`,
                 borderRadius: "md",
               }}
             >
@@ -75,7 +74,7 @@ const NavBar = () => {
           ))}
         </HStack>
         <Flex alignItems="center">
-          <img src={logo} alt="logo" width="60" />
+          <img src={logo} alt="logo" width="120" />
         </Flex>
       </Flex>
       <Collapse in={isOpen} animateOpacity>
