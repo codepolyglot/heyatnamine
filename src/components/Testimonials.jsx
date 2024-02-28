@@ -114,8 +114,8 @@ const Testimonials = () => {
             textAlign={"center"}
             whiteSpace={"wrap"}
           >
-            Pasientlərimizin ailələrindən gələn rəylər  onların
-            xidmətlərimizə göstərdikləri sarsılmaz inamı əks etdirir
+            Pasientlərimizin ailələrindən gələn rəylər onların xidmətlərimizə
+            göstərdikləri sarsılmaz inamı əks etdirir
           </Badge>
         </Stack>
         <Stack
