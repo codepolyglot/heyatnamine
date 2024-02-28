@@ -74,7 +74,9 @@ const NavBar = () => {
           ))}
         </HStack>
         <Flex alignItems="center">
-          <img src={logo} alt="logo" width="120" />
+          <Link to="/home">
+            <img src={logo} alt="logo" width="120" />
+          </Link>
         </Flex>
       </Flex>
       <Collapse in={isOpen} animateOpacity>
