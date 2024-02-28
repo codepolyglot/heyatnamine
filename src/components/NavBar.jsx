@@ -41,14 +41,13 @@ const Links = [
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const gradient = useColorModeValue(
+    "linear(to-t, #f1f1f1, #f1f1f1)",
+    "linear(to-t, #1a202c, #1a202c)"
+  );
+
   return (
-    <Box
-      bgGradient={useColorModeValue(
-        "linear(to-t, #f1f1f1, #f1f1f1)",
-        "linear(to-t, #1a202c, #1a202c)"
-      )}
-      px={4}
-    >
+    <Box bgGradient={gradient} px={4}>
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <IconButton
           size="md"
@@ -67,7 +66,7 @@ const NavBar = () => {
               color="black"
               _hover={{
                 textDecoration: "none",
-                bg: useColorModeValue("gray.200", "gray.700"),
+                bg: "${gradient}",
                 borderRadius: "md",
               }}
             >
@@ -91,7 +90,7 @@ const NavBar = () => {
                 color="black"
                 _hover={{
                   textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
+                  bg: `${gradient}`,
                   borderRadius: "md",
                 }}
               >
