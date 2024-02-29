@@ -1,6 +1,16 @@
 import React from "react";
-import {Box, Button, Container, createIcon, Heading, Icon, Stack, Text, useColorModeValue,} from "@chakra-ui/react";
-import {Link} from "react-router-dom";
+import {
+  Box,
+  Button,
+  Container,
+  createIcon,
+  Heading,
+  Icon,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Arrow = createIcon({
   displayName: "Arrow",
@@ -16,6 +26,8 @@ const Arrow = createIcon({
 });
 
 const Welcome = () => {
+  const colorMode = useColorModeValue("gray.800", "gray.300");
+
   return (
     <>
       <Container maxW={"3xl"}>
@@ -37,10 +49,9 @@ const Welcome = () => {
             </Text>
           </Heading>
           <Text color={"gray.500"}>
-            Peşəkar komandamızla birlikdə biz hər bir xəstəyə fərdi və şəfqətli
-            qayğı göstərməyə sadiqik. Asılılığın müalicəsinə yanaşmamız hər bir
-            fərdin ehtiyaclarına uyğunlaşdırılmış hərtərəfli psixoloji
-            müdaxilələri əhatə edir.
+            Peşəkar komandamızla birlikdə biz hər bir xəstəyə fərdi yanaşırıq .
+            Asılılığın müalicəsinə yanaşmamız hər bir fərdin ehtiyaclarına
+            uyğunlaşdırılmış hərtərəfli psixoloji müdaxilələri əhatə edir.
           </Text>
           <Stack
             direction={"column"}
@@ -63,7 +74,7 @@ const Welcome = () => {
             <Box>
               <Icon
                 as={Arrow}
-                color={useColorModeValue("gray.800", "gray.300")}
+                color={`${colorMode}`}
                 w={71}
                 position={"absolute"}
                 right={-71}

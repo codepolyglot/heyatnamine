@@ -14,6 +14,8 @@ const SocialProfileSimple = () => {
     { id: 3, url: `${rovsen}`, name: "Rövşən" },
   ];
 
+  const colorMode = useColorModeValue("white", "gray.900");
+
   return (
     <>
       <Center
@@ -33,7 +35,7 @@ const SocialProfileSimple = () => {
           w={"full"}
           minW={"fit-content"}
           height={"100%"}
-          bg={useColorModeValue("white", "gray.900")}
+          bg={`${colorMode}`}
           boxShadow={"xl"}
           roundedBottomEnd={"lg"}
           roundedTopStart={"lg"}
