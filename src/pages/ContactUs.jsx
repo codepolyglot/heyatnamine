@@ -1,19 +1,15 @@
 import React from "react";
 import {
-  Box,
-  Flex,
-  Stack,
-  Heading,
-  Text,
-  Container,
-  Input,
-  Button,
-  SimpleGrid,
-  Avatar,
-  AvatarGroup,
-  useBreakpointValue,
-  IconProps,
-  Icon,
+    Box,
+    Button,
+    Container,
+    Heading,
+    Icon,
+    Input,
+    SimpleGrid,
+    Stack,
+    Text,
+    useBreakpointValue,
 } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";

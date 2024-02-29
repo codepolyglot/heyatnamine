@@ -1,29 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useRef, useState} from "react";
 import 'video-react/dist/video-react.css'; // import css
-import { Player,player } from 'video-react';
 import reablitasiyaVideo from "./../assets/REABILITASIYA.mp4"
 import {
-  Container,
-  Stack,
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Button,
-  Image,
-  Icon,
-  IconButton,
-  createIcon,
-  IconProps,
-  useColorModeValue,
+    Box,
+    Button,
+    Container,
+    createIcon,
+    Flex,
+    Heading,
+    Icon,
+    IconButton,
+    Image,
+    Stack,
+    Text,
+    useColorModeValue,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import cover from "./../assets/googlebusiness/cover.jpg";
-import { FaRegCirclePause } from "react-icons/fa6";
-
-
-
-
+import {FaRegCirclePause} from "react-icons/fa6";
 
 
 const Blob = (props) => {

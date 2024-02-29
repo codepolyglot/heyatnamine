@@ -1,20 +1,9 @@
 'use client'
 
-import {
-  Heading,
-  Avatar,
-  Box,
-  Center,
-  Text,
-  Stack,
-  Button,
-  Link,
-  Badge,
-  useColorModeValue,
-} from '@chakra-ui/react'
+import {Avatar, Box, Center, useColorModeValue,} from '@chakra-ui/react'
 
 import data from "./../db/db.json"
-import { useState } from 'react'
+import {useState} from 'react'
 import SocialProfileWithImageHorizontal from './OpenCard';
 
 export default function SocialProfileSimple() {

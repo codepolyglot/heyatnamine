@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Heading,
-  Text,
-  Stack,
-  Container,
-  Avatar,
-  useColorModeValue,
-  Badge,
-} from "@chakra-ui/react";
+import {Avatar, Badge, Box, Container, Flex, Heading, Stack, Text, useColorModeValue,} from "@chakra-ui/react";
 
 const Testimonial = (props) => {
   const { children } = props;

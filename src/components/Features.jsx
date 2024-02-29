@@ -1,21 +1,20 @@
 import React from "react";
 import {
-  Container,
-  SimpleGrid,
-  Image,
-  Flex,
-  Heading,
-  Text,
-  Stack,
-  StackDivider,
-  Icon,
-  useColorModeValue,
+    Container,
+    Flex,
+    Heading,
+    Icon,
+    Image,
+    SimpleGrid,
+    Stack,
+    StackDivider,
+    Text,
+    useColorModeValue,
 } from "@chakra-ui/react";
-import { CiPill } from "react-icons/ci";
-import { FaWineBottle } from "react-icons/fa";
-import { GiPokerHand } from "react-icons/gi";
+import {CiPill} from "react-icons/ci";
+import {FaWineBottle} from "react-icons/fa";
+import {GiPokerHand} from "react-icons/gi";
 import lection from "./../assets/googlebusiness/leksiya.jpg";
-import { ReactElement } from "react";
 
 const Feature = ({ text, icon, iconBg }) => {
   return (

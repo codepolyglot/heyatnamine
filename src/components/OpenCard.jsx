@@ -1,17 +1,7 @@
 'use client'
 
-import {
-  Badge,
-  Button,
-  Center,
-  Flex,
-  Heading,
-  Image,
-  Stack,
-  Text,
-  useColorModeValue,
-} from '@chakra-ui/react'
-import { IoIosCloseCircleOutline } from "react-icons/io";
+import {Badge, Button, Center, Flex, Heading, Image, Stack, Text, useColorModeValue,} from '@chakra-ui/react'
+import {IoIosCloseCircleOutline} from "react-icons/io";
 
 export default function SocialProfileWithImageHorizontal({cardState,setCardState}) {
   return (

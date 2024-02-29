@@ -1,17 +1,8 @@
 import React from "react";
-import {
-  Box,
-  chakra,
-  Flex,
-  SimpleGrid,
-  Stat,
-  StatLabel,
-  StatNumber,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { BsPerson } from "react-icons/bs";
-import { IoCheckmarkDoneCircleOutline } from "react-icons/io5";
-import { GoLocation } from "react-icons/go";
+import {Box, chakra, Flex, SimpleGrid, Stat, StatLabel, StatNumber, useColorModeValue,} from "@chakra-ui/react";
+import {BsPerson} from "react-icons/bs";
+import {IoCheckmarkDoneCircleOutline} from "react-icons/io5";
+import {GoLocation} from "react-icons/go";
 
 function StatsCard(props) {
   const { title, stat, icon } = props;

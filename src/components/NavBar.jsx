@@ -1,17 +1,17 @@
 import React from "react";
 import {
-  Box,
-  Flex,
-  IconButton,
-  useDisclosure,
-  useColorModeValue,
-  Link as ChakraLink,
-  Collapse,
-  HStack,
-  Stack,
+    Box,
+    Collapse,
+    Flex,
+    HStack,
+    IconButton,
+    Link as ChakraLink,
+    Stack,
+    useColorModeValue,
+    useDisclosure,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import {CloseIcon, HamburgerIcon} from "@chakra-ui/icons";
+import {Link} from "react-router-dom";
 import logo from "./../assets/logo.png";
 
 const Links = [

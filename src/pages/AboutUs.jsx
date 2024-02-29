@@ -3,25 +3,23 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import cover from "./../assets/channels4_profile.jpg";
 import {
-  Box,
-  chakra,
-  Container,
-  Stack,
-  Text,
-  Image,
-  Flex,
-  VStack,
-  Button,
-  Heading,
-  SimpleGrid,
-  StackDivider,
-  useColorModeValue,
-  VisuallyHidden,
-  List,
-  ListItem,
+    Box,
+    Button,
+    Container,
+    Flex,
+    Heading,
+    Image,
+    List,
+    ListItem,
+    SimpleGrid,
+    Stack,
+    StackDivider,
+    Text,
+    useColorModeValue,
+    VStack,
 } from "@chakra-ui/react";
-import { MdLocalShipping } from "react-icons/md";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+
 const AboutUs = () => {
   return (
     <>

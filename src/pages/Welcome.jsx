@@ -1,17 +1,6 @@
 import React from "react";
-import {
-  Box,
-  Heading,
-  Container,
-  Text,
-  Button,
-  Stack,
-  Icon,
-  useColorModeValue,
-  createIcon,
-} from "@chakra-ui/react";
-import logo from "./../assets/logo.png";
-import { Link } from "react-router-dom";
+import {Box, Button, Container, createIcon, Heading, Icon, Stack, Text, useColorModeValue,} from "@chakra-ui/react";
+import {Link} from "react-router-dom";
 
 const Arrow = createIcon({
   displayName: "Arrow",
