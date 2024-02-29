@@ -1,19 +1,17 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+const {onDocumentWritten}=require("firebase-functions/v2/firestore");
+const {onRequest, onCall}=require("firebase-functions/v2/https");
+const logger=require("firebase-functions/logger");
 
-const {onRequest} = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+exports.helloWorld=onRequest((request, response)=>{
+logger.info("Hellologs!", {structuredData:true});
+response.send("HellofromFirebase!");
+});
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+exports.exampleOnCallFunction=onCall((data, context)=>{
+logger.info("ExampleonCallfunctiontriggered!", {data, context});
+return{message:"ThisisanexampleonCallfunctionresponse."};
+});
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+exports.exampleOnDocumentWrittenFunction=onDocumentWritten((change, context)=>{
+logger.info("ExampleonDocumentWrittenfunctiontriggered!", {change, context});
+});

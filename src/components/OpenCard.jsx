@@ -1,31 +1,38 @@
-'use client'
+"use client";
 
-import {Badge, Button, Center, Flex, Heading, Image, Stack, Text, useColorModeValue,} from '@chakra-ui/react'
-import {IoIosCloseCircleOutline} from "react-icons/io";
+import {
+  Badge,
+  Button,
+  Center,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
-export default function SocialProfileWithImageHorizontal({cardState,setCardState}) {
+export default function SocialProfileWithImageHorizontal({
+  cardState,
+  setCardState,
+}) {
   return (
-    <Center py={1} >
+    <Center py={1}>
       <Stack
-      position={"relative"}
+        position={"relative"}
         borderWidth="1px"
         borderRadius="lg"
-        w={{ sm: '100%', md: '70vw'  }}
-        height={{ sm: '876px', md: '35rem' }}
-        direction={{ base: 'column', md: 'row' }}
+        w={{ sm: "100%", md: "70vw" }}
+        height={{ sm: "100%", md: "35rem" }}
+        direction={{ base: "column", md: "row" }}
         // eslint-disable-next-line react-hooks/rules-of-hooks
-        bg={useColorModeValue('white', 'gray.900')}
-        boxShadow={'2xl'}
-        padding={4}>
+        bg={useColorModeValue("white", "gray.900")}
+        boxShadow={"2xl"}
+        padding={4}
+      >
         <Flex flex={1} bg="blue.200">
-          <Image
-            objectFit="cover"
-            boxSize="100%"
-            src={
-              'https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
-            }
-            alt="#"
-          />
+          <Image objectFit="cover" boxSize="100%" src={cardState.url} alt="#" />
         </Flex>
         <Stack
           flex={1}
@@ -33,100 +40,108 @@ export default function SocialProfileWithImageHorizontal({cardState,setCardState
           justifyContent="center"
           alignItems="center"
           p={1}
-          pt={2}>
-             <Text
-            textAlign={'center'}
+          pt={2}
+        >
+          <Text
+            textAlign={"center"}
             // eslint-disable-next-line react-hooks/rules-of-hooks
-            color={useColorModeValue('gray.700', 'gray.400')}
+            color={useColorModeValue("gray.700", "gray.400")}
             px={3}
             position={"absolute"}
             right={"15px"}
             top={"15px"}
             fontWeight={"bold"}
             fontFamily={"sans-serif"}
-            onClick={()=>setCardState(null)}
+            onClick={() => setCardState(null)}
             cursor={"pointer"}
-            >
-         <IoIosCloseCircleOutline fontSize={"30"} />
+          >
+            <IoIosCloseCircleOutline fontSize={"30"} />
           </Text>
-          <Heading fontSize={'2xl'} fontFamily={'body'}>
-            Lindsey James  {cardState}
+          <Heading fontSize={"2xl"} fontFamily={"body"}>
+            {cardState.name}
           </Heading>
-          <Text fontWeight={600} color={'gray.500'} size="sm" mb={4}>
-            @lindsey_jam3s
+          <Text fontWeight={600} color={"gray.500"} size="sm" mb={4}>
+            {`@ ${cardState.name}`}
           </Text>
           <Text
-            textAlign={'center'}
+            textAlign={"center"}
             // eslint-disable-next-line react-hooks/rules-of-hooks
-            color={useColorModeValue('gray.700', 'gray.400')}
-            px={3}>
+            color={useColorModeValue("gray.700", "gray.400")}
+            px={3}
+          >
             Actress, musician, songwriter and artist. PM for work inquires or
-            <Text color={'blue.400'}>#tag</Text>
+            <Text color={"blue.400"}>#tag</Text>
             me in your posts
           </Text>
-          <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+          <Stack align={"center"} justify={"center"} direction={"row"} mt={6}>
             <Badge
               px={2}
               py={1}
               // eslint-disable-next-line react-hooks/rules-of-hooks
-              bg={useColorModeValue('gray.50', 'gray.800')}
-              fontWeight={'400'}>
+              bg={useColorModeValue("gray.50", "gray.800")}
+              fontWeight={"400"}
+            >
               #art
             </Badge>
             <Badge
               px={2}
               py={1}
               // eslint-disable-next-line react-hooks/rules-of-hooks
-              bg={useColorModeValue('gray.50', 'gray.800')}
-              fontWeight={'400'}>
+              bg={useColorModeValue("gray.50", "gray.800")}
+              fontWeight={"400"}
+            >
               #photography
             </Badge>
             <Badge
               px={2}
               py={1}
               // eslint-disable-next-line react-hooks/rules-of-hooks
-              bg={useColorModeValue('gray.50', 'gray.800')}
-              fontWeight={'400'}>
+              bg={useColorModeValue("gray.50", "gray.800")}
+              fontWeight={"400"}
+            >
               #music
             </Badge>
           </Stack>
 
           <Stack
-            width={'100%'}
-            mt={'2rem'}
-            direction={'row'}
+            width={"100%"}
+            mt={"2rem"}
+            direction={"row"}
             padding={2}
-            justifyContent={'space-between'}
-            alignItems={'center'}>
+            justifyContent={"space-between"}
+            alignItems={"center"}
+          >
             <Button
               flex={1}
-              fontSize={'sm'}
-              rounded={'full'}
+              fontSize={"sm"}
+              rounded={"full"}
               _focus={{
-                bg: 'gray.200',
-              }}>
+                bg: "gray.200",
+              }}
+            >
               Message
             </Button>
             <Button
               flex={1}
-              fontSize={'sm'}
-              rounded={'full'}
-              bg={'blue.400'}
-              color={'white'}
+              fontSize={"sm"}
+              rounded={"full"}
+              bg={"blue.400"}
+              color={"white"}
               boxShadow={
-                '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+                "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
               }
               _hover={{
-                bg: 'blue.500',
+                bg: "blue.500",
               }}
               _focus={{
-                bg: 'blue.500',
-              }}>
+                bg: "blue.500",
+              }}
+            >
               Follow
             </Button>
           </Stack>
         </Stack>
       </Stack>
     </Center>
-  )
+  );
 }

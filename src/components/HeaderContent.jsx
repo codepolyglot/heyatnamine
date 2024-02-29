@@ -53,7 +53,7 @@ const HeaderContent = () => {
 console.log(player.currentTime);  */
   const [showVideo, setShowVideo] = useState(false);
   const [showIcon, setShowIcon] = useState(false);
-  const vidRef = useRef(false);
+
  
 
   const pauseIcon = <FaRegCirclePause fontSize={42}  />
