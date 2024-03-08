@@ -1,0 +1,11 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import MyComponent from './MyComponent';
+
+test('renders MyComponent', () => {
+  render(<MyComponent prop1="value1" prop2="value2" />);
+  const prop1Element = screen.getByText(/value1/i);
+  const prop2Element = screen.getByText(/value2/i);
+  expect(prop1Element).toBeInTheDocument();
+  expect(prop2Element).toBeInTheDocument();
+});
